@@ -125,7 +125,15 @@ export default function TemporalEvolution() {
   const windowSpan =
     timeline?.window_span ??
     timeline?.time_span ??
-    "—";
+    (
+      Array.isArray(timeline?.event_window_ids) &&
+      timeline.event_window_ids.length > 0
+        ? [
+            Math.min(...timeline.event_window_ids),
+            Math.max(...timeline.event_window_ids),
+          ]
+        : "—"
+    );
 
   const firstPattern =
     timeline?.first_suspicious_pattern ||
