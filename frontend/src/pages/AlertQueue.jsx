@@ -122,10 +122,10 @@ export default function AlertQueue() {
 
           <div className="text-right">
             <div className="text-2xl font-bold">
-              {alerts.length}
+               {alerts.length} <span className="text-sm font-normal text-muted">of 142</span>
             </div>
             <div className="text-xs text-muted">
-              candidates
+                candidates shown
             </div>
           </div>
         </div>

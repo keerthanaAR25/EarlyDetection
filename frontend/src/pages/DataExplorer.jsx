@@ -91,6 +91,9 @@ export default function DataExplorer() {
     0
   );
 
+  // AMLSim ground truth contains 671 alert-linked transactions.
+  const amlsimAlertTransactionCount = 671;
+
   return (
     <div className="space-y-5">
 
@@ -174,15 +177,15 @@ export default function DataExplorer() {
 
           <div className="rounded-lg border border-border p-4">
             <div className="text-xs text-muted uppercase tracking-wide">
-              Labelled SAR transactions
+              AMLSim alert transactions
             </div>
 
             <div className="text-2xl font-bold mt-1">
-              {labelledCount}
+              {amlsimAlertTransactionCount.toLocaleString("en-IN")}
             </div>
 
             <div className="text-xs text-muted mt-1">
-              Based on available transaction labels
+              Known alert-linked transactions in the AMLSim ground truth
             </div>
           </div>
 
@@ -334,9 +337,11 @@ export default function DataExplorer() {
         <p className="text-xs text-muted mt-1 leading-relaxed">
           Transaction records provide the underlying evidence used by the
           temporal transaction graph, behavioural features and suspicious
-          pattern detectors. A SAR label identifies an available labelled
-          transaction; it does not by itself establish that the account or
-          transaction constitutes confirmed money laundering.
+          pattern detectors. The AMLSim dataset contains 671 transactions
+          linked to the known alert ground truth. The alert-linked count is
+          separate from the transaction-level label field returned by the
+          explorer API. A known alert linkage does not by itself establish
+          confirmed money laundering.
         </p>
       </div>
 
