@@ -1,0 +1,155 @@
+{
+  "static_graph_anomaly_isolation_forest": {
+    "val": {
+      "n_samples": 613567,
+      "n_positive": 59,
+      "n_negative": 613508,
+      "precision": 0.0005058534470299177,
+      "recall": 0.3559322033898305,
+      "f1": 0.0010102710894089914,
+      "roc_auc": 0.7718222535299363,
+      "pr_auc": 0.0005462025356208888,
+      "false_warning_rate": 0.06763236991204678,
+      "top_k_precision": {
+        "10": 0.0,
+        "20": 0.0,
+        "50": 0.0
+      }
+    },
+    "test": {
+      "n_samples": 653487,
+      "n_positive": 32,
+      "n_negative": 653455,
+      "precision": 0.00011432708980392904,
+      "recall": 0.1875,
+      "f1": 0.0002285148439434045,
+      "roc_auc": 0.660306108492551,
+      "pr_auc": 0.0001157711367001371,
+      "false_warning_rate": 0.08030392299393226,
+      "top_k_precision": {
+        "10": 0.0,
+        "20": 0.0,
+        "50": 0.0
+      }
+    }
+  },
+  "behavioural_logistic_regression": {
+    "val": {
+      "n_samples": 613567,
+      "n_positive": 59,
+      "n_negative": 613508,
+      "precision": 0.0011677156315560305,
+      "recall": 1.0,
+      "f1": 0.0023327073243056243,
+      "roc_auc": 0.963278489150971,
+      "pr_auc": 0.0013701296616370176,
+      "false_warning_rate": 0.08225972603454233,
+      "top_k_precision": {
+        "10": 0.0,
+        "20": 0.0,
+        "50": 0.0
+      }
+    },
+    "test": {
+      "n_samples": 653487,
+      "n_positive": 32,
+      "n_negative": 653455,
+      "precision": 0.0007245392383281257,
+      "recall": 1.0,
+      "f1": 0.0014480293225937826,
+      "roc_auc": 0.9634192245449189,
+      "pr_auc": 0.0006438543720649901,
+      "false_warning_rate": 0.06753946331422975,
+      "top_k_precision": {
+        "10": 0.0,
+        "20": 0.0,
+        "50": 0.0
+      }
+    }
+  },
+  "temporal_random_forest": {
+    "val": {
+      "n_samples": 613567,
+      "n_positive": 59,
+      "n_negative": 613508,
+      "precision": 0.0016755616234330397,
+      "recall": 0.9152542372881356,
+      "f1": 0.0033449995354167313,
+      "roc_auc": 0.9813895897148524,
+      "pr_auc": 0.02354916067332482,
+      "false_warning_rate": 0.05244267393416223,
+      "top_k_precision": {
+        "10": 0.0,
+        "20": 0.05,
+        "50": 0.08
+      }
+    },
+    "test": {
+      "n_samples": 653487,
+      "n_positive": 32,
+      "n_negative": 653455,
+      "precision": 0.0007457955774322258,
+      "recall": 0.625,
+      "f1": 0.0014898134008715408,
+      "roc_auc": 0.9731076307855934,
+      "pr_auc": 0.015489173853456632,
+      "false_warning_rate": 0.041008179599207294,
+      "top_k_precision": {
+        "10": 0.0,
+        "20": 0.05,
+        "50": 0.02
+      }
+    }
+  },
+  "proposed_gradient_boosting": {
+    "val": {
+      "n_samples": 613567,
+      "n_positive": 59,
+      "n_negative": 613508,
+      "precision": 0.04395604395604396,
+      "recall": 0.3389830508474576,
+      "f1": 0.07782101167315175,
+      "roc_auc": 0.9699376235117125,
+      "pr_auc": 0.12100135456947461,
+      "false_warning_rate": 0.0007090372089687502,
+      "top_k_precision": {
+        "10": 0.4,
+        "20": 0.3,
+        "50": 0.3
+      }
+    },
+    "test": {
+      "n_samples": 653487,
+      "n_positive": 32,
+      "n_negative": 653455,
+      "precision": 0.29411764705882354,
+      "recall": 0.15625,
+      "f1": 0.20408163265306123,
+      "roc_auc": 0.9750381625360584,
+      "pr_auc": 0.0777529247998856,
+      "false_warning_rate": 1.8363927125815854e-05,
+      "top_k_precision": {
+        "10": 0.4,
+        "20": 0.25,
+        "50": 0.14
+      },
+      "threshold": 0.8,
+      "confusion_matrix": {
+        "tp": 5,
+        "fp": 12,
+        "fn": 27,
+        "tn": 653443
+      }
+    },
+    "class_weight": {
+      "multiplier": 0.5,
+      "base_scale_pos_weight": 4281.723723723724,
+      "effective_scale_pos_weight": 2140.861861861862
+    },
+    "threshold_selection": {
+      "threshold": 0.8,
+      "selection_split": "validation",
+      "selection_metric": "validation_pr_auc"
+    }
+  }
+}

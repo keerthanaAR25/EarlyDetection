@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Feature Analysis — Global SHAP Importance</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Arial, sans-serif; margin: 2rem; color: #1a1a2e; background: #f7f8fb; }
+h1 { margin-bottom: 0.2rem; } h2 { margin-top: 2rem; }
+.meta { color: #666; margin-bottom: 1.5rem; }
+.cards { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.card { background: white; border-radius: 8px; padding: 1rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); min-width: 150px; }
+.card .label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.03em; }
+.card .value { font-size: 1.5rem; font-weight: 600; margin-top: 0.25rem; }
+table { border-collapse: collapse; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+th, td { padding: 0.5rem 0.9rem; text-align: left; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+th { background: #eef1fa; }
+.note { font-size: 0.85rem; color: #888; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Feature Analysis — Global SHAP Importance</h1>
+<div class="meta">Mean absolute SHAP value per feature for the proposed early-warning model, computed on the test split.</div>
+<div class="cards"><div class="card"><div class="label">Top Feature</div><div class="value">total_count</div></div></div>
+<h2>Global Feature Importance (Top 15)</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>feature</th>
+      <th>mean_abs_shap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>total_count</td>
+      <td>3.84576</td>
+    </tr>
+    <tr>
+      <td>total_amount</td>
+      <td>1.23895</td>
+    </tr>
+    <tr>
+      <td>weighted_out_degree</td>
+      <td>0.69883</td>
+    </tr>
+    <tr>
+      <td>pagerank</td>
+      <td>0.60653</td>
+    </tr>
+    <tr>
+      <td>unique_counterparties</td>
+      <td>0.60171</td>
+    </tr>
+    <tr>
+      <td>clustering_coefficient</td>
+      <td>0.59375</td>
+    </tr>
+    <tr>
+      <td>recent_vs_historical_activity</td>
+      <td>0.39786</td>
+    </tr>
+    <tr>
+      <td>neighbor_count</td>
+      <td>0.38067</td>
+    </tr>
+    <tr>
+      <td>component_size</td>
+      <td>0.36360</td>
+    </tr>
+    <tr>
+      <td>weighted_in_degree</td>
+      <td>0.34809</td>
+    </tr>
+    <tr>
+      <td>transaction_velocity</td>
+      <td>0.33991</td>
+    </tr>
+    <tr>
+      <td>log_total_amount</td>
+      <td>0.26029</td>
+    </tr>
+    <tr>
+      <td>degree_ratio_out_in</td>
+      <td>0.20460</td>
+    </tr>
+    <tr>
+      <td>intermediary_balance_ratio</td>
+      <td>0.15332</td>
+    </tr>
+    <tr>
+      <td>delta_total_amount</td>
+      <td>0.14582</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

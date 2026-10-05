@@ -1,0 +1,74 @@
+[
+  {
+    "class_weight_multiplier": 0.5,
+    "base_scale_pos_weight": 4281.723723723724,
+    "effective_scale_pos_weight": 2140.861861861862,
+    "val_roc_auc": 0.9699376235117125,
+    "val_pr_auc": 0.12100135456947461,
+    "val_precision": 0.32432432432432434,
+    "val_recall": 0.2033898305084746,
+    "val_f1": 0.25,
+    "val_false_warning_rate": 4.07492648832615e-05,
+    "selected_threshold": 0.8
+  },
+  {
+    "class_weight_multiplier": 0.25,
+    "base_scale_pos_weight": 4281.723723723724,
+    "effective_scale_pos_weight": 1070.430930930931,
+    "val_roc_auc": 0.9726967631436132,
+    "val_pr_auc": 0.11302825492280218,
+    "val_precision": 0.29411764705882354,
+    "val_recall": 0.1694915254237288,
+    "val_f1": 0.21505376344086022,
+    "val_false_warning_rate": 3.911929428793104e-05,
+    "selected_threshold": 0.8
+  },
+  {
+    "class_weight_multiplier": 1.0,
+    "base_scale_pos_weight": 4281.723723723724,
+    "effective_scale_pos_weight": 4281.723723723724,
+    "val_roc_auc": 0.9728181268864148,
+    "val_pr_auc": 0.10349791407000386,
+    "val_precision": 0.3,
+    "val_recall": 0.1016949152542373,
+    "val_f1": 0.1518987341772152,
+    "val_false_warning_rate": 2.2819588334626442e-05,
+    "selected_threshold": 0.9
+  },
+  {
+    "class_weight_multiplier": 0.05,
+    "base_scale_pos_weight": 4281.723723723724,
+    "effective_scale_pos_weight": 214.0861861861862,
+    "val_roc_auc": 0.9726811264765461,
+    "val_pr_auc": 0.09124048332144595,
+    "val_precision": 0.2558139534883721,
+    "val_recall": 0.1864406779661017,
+    "val_f1": 0.21568627450980393,
+    "val_false_warning_rate": 5.2159059050574726e-05,
+    "selected_threshold": 0.6
+  },
+  {
+    "class_weight_multiplier": 0.025,
+    "base_scale_pos_weight": 4281.723723723724,
+    "effective_scale_pos_weight": 107.0430930930931,
+    "val_roc_auc": 0.9732404412170167,
+    "val_pr_auc": 0.08920484693834295,
+    "val_precision": 0.12745098039215685,
+    "val_recall": 0.22033898305084745,
+    "val_f1": 0.16149068322981366,
+    "val_false_warning_rate": 0.00014506738298441095,
+    "selected_threshold": 0.4
+  },
+  {
+    "class_weight_multiplier": 0.1,
+    "base_scale_pos_weight": 4281.723723723724,
+    "effective_scale_pos_weight": 428.1723723723724,
+    "val_roc_auc": 0.9732746982261389,
+    "val_pr_auc": 0.06439260559511592,
+    "val_precision": 0.09239130434782608,
+    "val_recall": 0.288135593220339,
+    "val_f1": 0.13991769547325103,
+    "val_false_warning_rate": 0.0002722050894201869,
+    "selected_threshold": 0.5
+  }
+]

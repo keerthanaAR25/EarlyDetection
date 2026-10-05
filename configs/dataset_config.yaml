@@ -1,0 +1,24 @@
+# Dataset-specific configuration, split out from configs/config.yaml
+# for readability. See docs/dataset.md for full provenance/access notes.
+
+amlsim:
+  raw_path: "data/raw/amlsim"
+  transactions_file: "transactions.csv"
+  accounts_file: "accounts.csv"
+  sim_start_date: "2024-01-01"
+  step_unit: "D"   # verify against your AMLSim run's conf.json before trusting this
+
+elliptic:
+  raw_path: "data/raw/elliptic"
+  features_file: "elliptic_txs_features.csv"
+  classes_file: "elliptic_txs_classes.csv"
+  edgelist_file: "elliptic_txs_edgelist.csv"
+  dataset_start_date: "2017-01-01"
+  step_unit_days: 14
+
+demo:
+  path: "data/demo"
+  n_normal_accounts: 150
+  n_rings: 3
+  simulation_days: 30
+  normal_tx_per_day: 60

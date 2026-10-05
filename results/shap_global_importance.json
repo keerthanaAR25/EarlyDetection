@@ -1,0 +1,62 @@
+[
+  {
+    "feature": "total_count",
+    "mean_abs_shap": 3.84576
+  },
+  {
+    "feature": "total_amount",
+    "mean_abs_shap": 1.23895
+  },
+  {
+    "feature": "weighted_out_degree",
+    "mean_abs_shap": 0.69883
+  },
+  {
+    "feature": "pagerank",
+    "mean_abs_shap": 0.60653
+  },
+  {
+    "feature": "unique_counterparties",
+    "mean_abs_shap": 0.60171
+  },
+  {
+    "feature": "clustering_coefficient",
+    "mean_abs_shap": 0.59375
+  },
+  {
+    "feature": "recent_vs_historical_activity",
+    "mean_abs_shap": 0.39786
+  },
+  {
+    "feature": "neighbor_count",
+    "mean_abs_shap": 0.38067
+  },
+  {
+    "feature": "component_size",
+    "mean_abs_shap": 0.3636
+  },
+  {
+    "feature": "weighted_in_degree",
+    "mean_abs_shap": 0.34809
+  },
+  {
+    "feature": "transaction_velocity",
+    "mean_abs_shap": 0.33991
+  },
+  {
+    "feature": "log_total_amount",
+    "mean_abs_shap": 0.26029
+  },
+  {
+    "feature": "degree_ratio_out_in",
+    "mean_abs_shap": 0.2046
+  },
+  {
+    "feature": "intermediary_balance_ratio",
+    "mean_abs_shap": 0.15332
+  },
+  {
+    "feature": "delta_total_amount",
+    "mean_abs_shap": 0.14582
+  }
+]

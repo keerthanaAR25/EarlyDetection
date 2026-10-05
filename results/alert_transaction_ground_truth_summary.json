@@ -1,0 +1,18 @@
+{
+  "alert_transactions": 671,
+  "alert_events": 100,
+  "ring_candidates": 265,
+  "temporal_ground_truth_matches": 9,
+  "account_matches_without_temporal_overlap": 44,
+  "single_account_matches": 188,
+  "no_matches": 24,
+  "potential_early_warnings": 0,
+  "lead_time_statistics": {
+    "n_positive_lead_time_candidates": 17,
+    "mean_lead_time_hours": 2950.5882352941176,
+    "median_lead_time_hours": 1224.0,
+    "max_lead_time_hours": 9456.0,
+    "min_lead_time_hours": 24.0
+  },
+  "ground_truth_definition": "An AML observable event is defined by the earliest transaction timestamp among transactions belonging to an AMLSim alert_id. Alert participants are the union of orig_acct and bene_acct. A candidate is considered a temporal ground-truth match when it shares at least two participant accounts with an AML alert and its candidate time span overlaps the alert transaction interval."
+}

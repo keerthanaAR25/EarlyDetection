@@ -1,0 +1,104 @@
+# ============================================================
+# Early-AML-Warning-System — Master Configuration
+# Every threshold, window size, and split boundary used by the
+# pipeline is defined here. Do not hard-code these in src/.
+# ============================================================
+
+project:
+  name: "Early-AML-Warning-System"
+  seed: 42
+
+dataset:
+  active: "amlsim"          # demo | amlsim | elliptic
+  demo:
+    path: "data/demo"
+  amlsim:
+    raw_path: "data/raw/amlsim"
+    transactions_file: "tx_log.csv"
+    alerts_file: "alert_transactions.csv"
+    accounts_file: "accounts.csv"
+  elliptic:
+    raw_path: "data/raw/elliptic"
+
+temporal:
+  window_size: "1d"       # snapshot window: 1h | 1d | 7d
+  step_size: "1d"         # rolling step between snapshots
+  min_window_transactions: 1
+
+split:
+  # Chronological split — NEVER randomly shuffled.
+  train_fraction: 0.6
+  val_fraction: 0.2
+  test_fraction: 0.2
+
+patterns:
+  fan_in:
+    min_senders: 4
+    max_time_window: "1d"
+  fan_out:
+    min_receivers: 4
+    max_time_window: "1d"
+  layering:
+    min_hops: 3
+    max_hops: 6
+    max_hop_gap_hours: 24
+  split_merge:
+    max_time_window: "2d"
+  circular_flow:
+    max_cycle_length: 6
+    max_duration_days: 7    # Real AMLSim data's labeled 'cycle' typology actually spans up to
+                             # 19 days (median 12) — a wider window would match ground truth
+                             # better, but 14d and 21d were both tried and timed out at real-data
+                             # scale (tens of thousands of candidate accounts from other detectors
+                             # make the branching cycle search infeasible in this environment).
+                             # Reverted to 7d, which completes reliably; documented as a real,
+                             # unresolved precision/runtime trade-off, not silently dropped.
+  repeated_intermediary:
+    min_pass_through_count: 3
+  rapid_pass_through:
+    max_hold_time_hours: 48   # real AMLSim data has daily-only timestamps (see docs/dataset.md);
+                               # 6h from the demo config can structurally never match here — see
+                               # src/patterns/rapid_pass_through.py's docstring for why.
+
+ring_candidates:
+  min_pattern_count: 2
+  min_accounts: 3
+  max_formation_gap_days: 10   # see docs/dataset.md note on candidate-generation precision
+
+risk_scoring:
+  thresholds:
+    low: [0, 24]
+    moderate: [25, 49]
+    high: [50, 74]
+    critical: [75, 100]
+  alert_threshold: 50   # score at/above which a "warning" fires (used by lead-time engine)
+  component_weights:    # must sum to 1.0 — see src/scoring/risk_engine.py for what each measures
+    behavioural: 0.35
+    network: 0.20
+    fund_flow: 0.25
+    persistence: 0.20
+
+models:
+  baseline_static: "isolation_forest"
+  baseline_behavioural: "logistic_regression"
+  baseline_temporal: "random_forest"
+  proposed: "gradient_boosting"   # falls back from xgboost if unavailable
+
+evaluation:
+  top_k: [10, 20, 50]
+  forecast_horizon_windows: 2   # early-warning label horizon: predict ring
+                                 # involvement in the NEXT N windows from
+                                 # features as of the current window only.
+                                 # See src/models/labels.py build_forecast_labels
+                                 # for why the same-window label was rejected.
+
+logging:
+  level: "INFO"
+  dir: "logs"
+
+performance:
+  # Exact betweenness centrality is O(V*E) — infeasible at real AMLSim
+  # scale (verified: ~4,700 nodes / ~198,000 edges takes minutes per
+  # window). Set to sample k nodes instead of computing exactly once
+  # the graph exceeds this size. null = always exact (fine for demo scale).
+  betweenness_sample_k: 100

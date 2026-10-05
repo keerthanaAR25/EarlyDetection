@@ -1,0 +1,250 @@
+{
+  "model_comparison": {
+    "static_graph_anomaly_isolation_forest": {
+      "val": {
+        "n_samples": 613567,
+        "n_positive": 59,
+        "n_negative": 613508,
+        "precision": 0.0005058534470299177,
+        "recall": 0.3559322033898305,
+        "f1": 0.0010102710894089914,
+        "roc_auc": 0.7718222535299363,
+        "pr_auc": 0.0005462025356208888,
+        "false_warning_rate": 0.06763236991204678,
+        "top_k_precision": {
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        }
+      },
+      "test": {
+        "n_samples": 653487,
+        "n_positive": 32,
+        "n_negative": 653455,
+        "precision": 0.00011432708980392904,
+        "recall": 0.1875,
+        "f1": 0.0002285148439434045,
+        "roc_auc": 0.660306108492551,
+        "pr_auc": 0.0001157711367001371,
+        "false_warning_rate": 0.08030392299393226,
+        "top_k_precision": {
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        }
+      }
+    },
+    "behavioural_logistic_regression": {
+      "val": {
+        "n_samples": 613567,
+        "n_positive": 59,
+        "n_negative": 613508,
+        "precision": 0.0011677156315560305,
+        "recall": 1.0,
+        "f1": 0.0023327073243056243,
+        "roc_auc": 0.963278489150971,
+        "pr_auc": 0.0013701296616370176,
+        "false_warning_rate": 0.08225972603454233,
+        "top_k_precision": {
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        }
+      },
+      "test": {
+        "n_samples": 653487,
+        "n_positive": 32,
+        "n_negative": 653455,
+        "precision": 0.0007245392383281257,
+        "recall": 1.0,
+        "f1": 0.0014480293225937826,
+        "roc_auc": 0.9634192245449189,
+        "pr_auc": 0.0006438543720649901,
+        "false_warning_rate": 0.06753946331422975,
+        "top_k_precision": {
+          "10": 0.0,
+          "20": 0.0,
+          "50": 0.0
+        }
+      }
+    },
+    "temporal_random_forest": {
+      "val": {
+        "n_samples": 613567,
+        "n_positive": 59,
+        "n_negative": 613508,
+        "precision": 0.0016755616234330397,
+        "recall": 0.9152542372881356,
+        "f1": 0.0033449995354167313,
+        "roc_auc": 0.9813895897148524,
+        "pr_auc": 0.02354916067332482,
+        "false_warning_rate": 0.05244267393416223,
+        "top_k_precision": {
+          "10": 0.0,
+          "20": 0.05,
+          "50": 0.08
+        }
+      },
+      "test": {
+        "n_samples": 653487,
+        "n_positive": 32,
+        "n_negative": 653455,
+        "precision": 0.0007457955774322258,
+        "recall": 0.625,
+        "f1": 0.0014898134008715408,
+        "roc_auc": 0.9731076307855934,
+        "pr_auc": 0.015489173853456632,
+        "false_warning_rate": 0.041008179599207294,
+        "top_k_precision": {
+          "10": 0.0,
+          "20": 0.05,
+          "50": 0.02
+        }
+      }
+    },
+    "proposed_gradient_boosting": {
+      "val": {
+        "n_samples": 613567,
+        "n_positive": 59,
+        "n_negative": 613508,
+        "precision": 0.04578313253012048,
+        "recall": 0.3220338983050847,
+        "f1": 0.08016877637130802,
+        "roc_auc": 0.9728181268864148,
+        "pr_auc": 0.10349791407000386,
+        "false_warning_rate": 0.0006454683557508622,
+        "top_k_precision": {
+          "10": 0.5,
+          "20": 0.3,
+          "50": 0.18
+        }
+      },
+      "test": {
+        "n_samples": 653487,
+        "n_positive": 32,
+        "n_negative": 653455,
+        "precision": 0.041025641025641026,
+        "recall": 0.25,
+        "f1": 0.07048458149779736,
+        "roc_auc": 0.9754144795739569,
+        "pr_auc": 0.07539007175988761,
+        "false_warning_rate": 0.0002861711977106304,
+        "top_k_precision": {
+          "10": 0.2,
+          "20": 0.2,
+          "50": 0.1
+        }
+      }
+    }
+  },
+  "ablation_study": [
+    {
+      "config": "A_behavioural_only",
+      "n_features": 20,
+      "n_features_missing": 0,
+      "precision": 0.000755368511924,
+      "recall": 0.875,
+      "f1": 0.0015094339622641,
+      "roc_auc": 0.9649424501304604,
+      "pr_auc": 0.000672712074737,
+      "false_warning_rate": 0.0566833217283516,
+      "note": NaN
+    },
+    {
+      "config": "B_network_only",
+      "n_features": 12,
+      "n_features_missing": 0,
+      "precision": 0.0363636363636363,
+      "recall": 0.0625,
+      "f1": 0.0459770114942528,
+      "roc_auc": 0.6891603572548989,
+      "pr_auc": 0.0028890314554458,
+      "false_warning_rate": 8.11073448056867e-05,
+      "note": NaN
+    },
+    {
+      "config": "C_behavioural_network",
+      "n_features": 32,
+      "n_features_missing": 0,
+      "precision": 0.0272727272727272,
+      "recall": 0.1875,
+      "f1": 0.0476190476190476,
+      "roc_auc": 0.9765308054877536,
+      "pr_auc": 0.0322544539762025,
+      "false_warning_rate": 0.0003274900337437,
+      "note": NaN
+    },
+    {
+      "config": "D_plus_temporal",
+      "n_features": 41,
+      "n_features_missing": 0,
+      "precision": 0.046875,
+      "recall": 0.1875,
+      "f1": 0.075,
+      "roc_auc": 0.973890201888424,
+      "pr_auc": 0.0511116241321583,
+      "false_warning_rate": 0.0001866999257791,
+      "note": NaN
+    },
+    {
+      "config": "E_plus_fund_flow",
+      "n_features": 49,
+      "n_features_missing": 0,
+      "precision": 0.0357142857142857,
+      "recall": 0.1875,
+      "f1": 0.06,
+      "roc_auc": 0.974038165405422,
+      "pr_auc": 0.0662416550422457,
+      "false_warning_rate": 0.0002479130161985,
+      "note": NaN
+    },
+    {
+      "config": "F_full_proposed",
+      "n_features": 59,
+      "n_features_missing": 0,
+      "precision": 0.0305676855895196,
+      "recall": 0.21875,
+      "f1": 0.053639846743295,
+      "roc_auc": 0.9152880888890588,
+      "pr_auc": 0.0479669205467954,
+      "false_warning_rate": 0.0003397326518275,
+      "note": NaN
+    }
+  ],
+  "lead_time_summary": {
+    "ground_truth_rings": 100,
+    "n_candidates": 142,
+    "n_matched_to_ground_truth": 2,
+    "n_alerted_candidates": 89,
+    "n_alerted_and_matched": 1,
+    "unique_ground_truth_rings_detected": 1,
+    "candidate_match_rate": 0.014084507042253521,
+    "ring_detection_rate": 0.01,
+    "false_warning_rate_candidates": 0.9887640449438202,
+    "mean_lead_time_windows": -23.0,
+    "median_lead_time_windows": -23.0,
+    "min_lead_time_windows": -23.0,
+    "max_lead_time_windows": -23.0,
+    "std_lead_time_windows": null,
+    "early_detection_rate": 0.0,
+    "n_early_detections": 0,
+    "evaluation_rule": "Candidate-to-AMLSim alert matching requires at least two shared participant accounts and overlapping transaction time intervals. The earliest AMLSim alert transaction is treated as the observable ground-truth event.",
+    "risk_model_note": "Warning-time reconstruction preserves the existing project's approximation: final behavioural and network components are held constant while fund-flow and persistence components are accumulated by trajectory window."
+  },
+  "risk_score_distribution": {
+    "n_candidates": 142,
+    "mean_risk_score": 52.083098591549295,
+    "by_level": {
+      "HIGH": 89,
+      "MODERATE": 53
+    }
+  },
+  "pattern_event_counts": {
+    "rapid_pass_through": 27668,
+    "fan_in": 10891,
+    "circular_flow": 933,
+    "repeated_intermediary": 233,
+    "layering": 130,
+    "split_merge": 14
+  }
+}

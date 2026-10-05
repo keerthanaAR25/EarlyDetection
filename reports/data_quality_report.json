@@ -1,0 +1,202 @@
+{
+  "dataset_label": "amlsim",
+  "generated_at": "2026-10-05T07:44:02.301944+00:00",
+  "summary": {
+    "row_count": 197905,
+    "column_count": 9,
+    "unique_transactions": 197905,
+    "unique_accounts": 4672,
+    "timestamp_range": {
+      "min": "2017-01-01T00:00:00+00:00",
+      "max": "2018-12-21T00:00:00+00:00"
+    },
+    "amount_statistics": {
+      "count": 197905,
+      "mean": 546.6319096030924,
+      "median": 546.78,
+      "std": 261.671164891691,
+      "min": 0.09,
+      "max": 999.99
+    },
+    "class_distribution": {
+      "0": 197234,
+      "1": 671
+    },
+    "scenario_distribution_top50": {
+      "74": 10,
+      "83": 10,
+      "78": 10,
+      "62": 10,
+      "79": 10,
+      "12": 9,
+      "29": 9,
+      "24": 9,
+      "26": 9,
+      "21": 9,
+      "8": 9,
+      "19": 9,
+      "35": 9,
+      "44": 9,
+      "47": 9,
+      "69": 9,
+      "82": 9,
+      "73": 9,
+      "87": 9,
+      "95": 9,
+      "80": 9,
+      "88": 9,
+      "25": 8,
+      "3": 8,
+      "7": 8,
+      "13": 8,
+      "6": 8,
+      "55": 8,
+      "42": 8,
+      "58": 8,
+      "30": 8,
+      "91": 8,
+      "52": 8,
+      "96": 8,
+      "77": 8,
+      "85": 8,
+      "71": 8,
+      "63": 8,
+      "72": 8,
+      "23": 7,
+      "22": 7,
+      "0": 7,
+      "15": 7,
+      "2": 7,
+      "38": 7,
+      "32": 7,
+      "59": 7,
+      "99": 7,
+      "89": 7,
+      "94": 7
+    }
+  },
+  "timestamp_out_of_order_rows": 0,
+  "issues": {
+    "missing_transaction_id": {
+      "description": "Null/NaN values in 'transaction_id'",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_sender": {
+      "description": "sender is null/empty",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_receiver": {
+      "description": "receiver is null/empty",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_amount": {
+      "description": "Null/NaN values in 'amount'",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_timestamp": {
+      "description": "Null/NaN values in 'timestamp'",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_label": {
+      "description": "Null/NaN values in 'label'",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_scenario_id": {
+      "description": "Null/NaN values in 'scenario_id'",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_ring_id": {
+      "description": "Null/NaN values in 'ring_id'",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "missing_dataset_source": {
+      "description": "Null/NaN values in 'dataset_source'",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "duplicate_transaction_ids": {
+      "description": "transaction_id appears more than once",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "duplicate_transaction_content": {
+      "description": "Identical sender/receiver/amount/timestamp appears more than once",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "invalid_amount_nan": {
+      "description": "amount is missing or non-numeric",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "negative_amount": {
+      "description": "amount < 0",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "zero_amount": {
+      "description": "amount == 0",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "self_transaction": {
+      "description": "sender == receiver",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "invalid_timestamp": {
+      "description": "timestamp is missing or unparseable",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "future_timestamp": {
+      "description": "timestamp is in the future",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "invalid_label_value": {
+      "description": "label not in {-1,0,1}",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "ring_without_scenario": {
+      "description": "ring_id set but scenario_id empty",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    },
+    "positive_label_without_ring": {
+      "description": "label==1 but no ring_id assigned",
+      "count": 0,
+      "pct_of_rows": 0.0,
+      "sample_transaction_ids": []
+    }
+  },
+  "total_issue_categories_with_findings": 0
+}

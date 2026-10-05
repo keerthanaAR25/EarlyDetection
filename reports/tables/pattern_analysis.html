@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Pattern Analytics</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Arial, sans-serif; margin: 2rem; color: #1a1a2e; background: #f7f8fb; }
+h1 { margin-bottom: 0.2rem; } h2 { margin-top: 2rem; }
+.meta { color: #666; margin-bottom: 1.5rem; }
+.cards { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.card { background: white; border-radius: 8px; padding: 1rem 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); min-width: 150px; }
+.card .label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 0.03em; }
+.card .value { font-size: 1.5rem; font-weight: 600; margin-top: 0.25rem; }
+table { border-collapse: collapse; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+th, td { padding: 0.5rem 0.9rem; text-align: left; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+th { background: #eef1fa; }
+.note { font-size: 0.85rem; color: #888; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Pattern Analytics</h1>
+<div class="meta">39,869 total pattern events detected across 8 detector types.</div>
+<div class="cards"><div class="card"><div class="label">Total Events</div><div class="value">39,869</div></div><div class="card"><div class="label">Distinct Types</div><div class="value">6</div></div></div>
+<h2>Events by Pattern Type</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>pattern_type</th>
+      <th>count</th>
+      <th>mean_strength</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rapid_pass_through</td>
+      <td>27668</td>
+      <td>0.341712</td>
+    </tr>
+    <tr>
+      <td>fan_in</td>
+      <td>10891</td>
+      <td>0.630211</td>
+    </tr>
+    <tr>
+      <td>circular_flow</td>
+      <td>933</td>
+      <td>0.988585</td>
+    </tr>
+    <tr>
+      <td>repeated_intermediary</td>
+      <td>233</td>
+      <td>0.542212</td>
+    </tr>
+    <tr>
+      <td>layering</td>
+      <td>130</td>
+      <td>0.265385</td>
+    </tr>
+    <tr>
+      <td>split_merge</td>
+      <td>14</td>
+      <td>0.500000</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>

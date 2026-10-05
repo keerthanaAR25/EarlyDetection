@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  backend:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      - DATABASE_URL=sqlite:////app/data/aml.db
+      - CORS_ORIGINS=http://localhost:5173
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./reports:/app/reports
+  frontend:
+    build: ./frontend
+    ports: ["5173:80"]
+    depends_on: [backend]

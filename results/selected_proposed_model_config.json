@@ -1,0 +1,9 @@
+{
+  "class_weight_multiplier": 0.5,
+  "base_scale_pos_weight": 4281.723723723724,
+  "effective_scale_pos_weight": 2140.861861861862,
+  "selected_threshold": 0.8,
+  "selection_split": "validation",
+  "selection_metric": "validation_pr_auc",
+  "threshold_selection_metric": "validation_f1"
+}

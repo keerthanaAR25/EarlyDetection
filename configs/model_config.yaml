@@ -1,0 +1,6 @@
+# Model configuration — placeholder, populated in Phase 10/11
+# (baselines + proposed early-warning model).
+# Kept as its own file per the project structure; not yet consumed
+# by any code as of Phase 2.
+baselines: {}
+proposed: {}

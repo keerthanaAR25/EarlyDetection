@@ -1,0 +1,428 @@
+[
+  {
+    "ring_id": "RING001",
+    "scenario_id": "RING001",
+    "accounts": [
+      "RING001_S1",
+      "RING001_S2",
+      "RING001_S3",
+      "RING001_S4",
+      "RING001_S5",
+      "RING001_C1",
+      "RING001_C2",
+      "RING001_C3",
+      "RING001_C4",
+      "RING001_D1",
+      "RING001_D2",
+      "RING001_D3",
+      "RING001_D4",
+      "RING001_D5"
+    ],
+    "start_date": "2026-01-02",
+    "stages": [
+      {
+        "stage_name": "fan_in",
+        "day_offset": 2,
+        "transaction_ids": [
+          "TX0001869",
+          "TX0001870",
+          "TX0001871",
+          "TX0001872",
+          "TX0001873"
+        ]
+      },
+      {
+        "stage_name": "layering",
+        "day_offset": 3,
+        "transaction_ids": [
+          "TX0001874",
+          "TX0001875",
+          "TX0001876"
+        ]
+      },
+      {
+        "stage_name": "fan_out",
+        "day_offset": 4,
+        "transaction_ids": [
+          "TX0001877",
+          "TX0001878",
+          "TX0001879",
+          "TX0001880",
+          "TX0001881"
+        ]
+      },
+      {
+        "stage_name": "repeated_intermediary",
+        "day_offset": 5,
+        "transaction_ids": [
+          "TX0001882",
+          "TX0001883"
+        ]
+      },
+      {
+        "stage_name": "circular_flow",
+        "day_offset": 6,
+        "transaction_ids": [
+          "TX0001884"
+        ]
+      }
+    ],
+    "observable_time": "2026-01-08",
+    "observable_day_index": 7
+  },
+  {
+    "ring_id": "RING002",
+    "scenario_id": "RING002",
+    "accounts": [
+      "RING002_S1",
+      "RING002_S2",
+      "RING002_S3",
+      "RING002_S4",
+      "RING002_S5",
+      "RING002_C1",
+      "RING002_C2",
+      "RING002_C3",
+      "RING002_C4",
+      "RING002_D1",
+      "RING002_D2",
+      "RING002_D3",
+      "RING002_D4",
+      "RING002_D5"
+    ],
+    "start_date": "2026-01-07",
+    "stages": [
+      {
+        "stage_name": "fan_in",
+        "day_offset": 2,
+        "transaction_ids": [
+          "TX0001897",
+          "TX0001898",
+          "TX0001899",
+          "TX0001900",
+          "TX0001901"
+        ]
+      },
+      {
+        "stage_name": "layering",
+        "day_offset": 3,
+        "transaction_ids": [
+          "TX0001902",
+          "TX0001903",
+          "TX0001904"
+        ]
+      },
+      {
+        "stage_name": "fan_out",
+        "day_offset": 4,
+        "transaction_ids": [
+          "TX0001905",
+          "TX0001906",
+          "TX0001907",
+          "TX0001908",
+          "TX0001909"
+        ]
+      },
+      {
+        "stage_name": "repeated_intermediary",
+        "day_offset": 5,
+        "transaction_ids": [
+          "TX0001910",
+          "TX0001911"
+        ]
+      },
+      {
+        "stage_name": "circular_flow",
+        "day_offset": 6,
+        "transaction_ids": [
+          "TX0001912"
+        ]
+      }
+    ],
+    "observable_time": "2026-01-13",
+    "observable_day_index": 12
+  },
+  {
+    "ring_id": "RING003",
+    "scenario_id": "RING003",
+    "accounts": [
+      "RING003_S1",
+      "RING003_S2",
+      "RING003_S3",
+      "RING003_S4",
+      "RING003_S5",
+      "RING003_C1",
+      "RING003_C2",
+      "RING003_C3",
+      "RING003_C4",
+      "RING003_D1",
+      "RING003_D2",
+      "RING003_D3",
+      "RING003_D4",
+      "RING003_D5"
+    ],
+    "start_date": "2026-01-09",
+    "stages": [
+      {
+        "stage_name": "fan_in",
+        "day_offset": 2,
+        "transaction_ids": [
+          "TX0001925",
+          "TX0001926",
+          "TX0001927",
+          "TX0001928",
+          "TX0001929"
+        ]
+      },
+      {
+        "stage_name": "layering",
+        "day_offset": 3,
+        "transaction_ids": [
+          "TX0001930",
+          "TX0001931",
+          "TX0001932"
+        ]
+      },
+      {
+        "stage_name": "fan_out",
+        "day_offset": 4,
+        "transaction_ids": [
+          "TX0001933",
+          "TX0001934",
+          "TX0001935",
+          "TX0001936",
+          "TX0001937"
+        ]
+      },
+      {
+        "stage_name": "repeated_intermediary",
+        "day_offset": 5,
+        "transaction_ids": [
+          "TX0001938",
+          "TX0001939"
+        ]
+      },
+      {
+        "stage_name": "circular_flow",
+        "day_offset": 6,
+        "transaction_ids": [
+          "TX0001940"
+        ]
+      }
+    ],
+    "observable_time": "2026-01-15",
+    "observable_day_index": 14
+  },
+  {
+    "ring_id": "RING004",
+    "scenario_id": "RING004",
+    "accounts": [
+      "RING004_S1",
+      "RING004_S2",
+      "RING004_S3",
+      "RING004_S4",
+      "RING004_S5",
+      "RING004_C1",
+      "RING004_C2",
+      "RING004_C3",
+      "RING004_C4",
+      "RING004_D1",
+      "RING004_D2",
+      "RING004_D3",
+      "RING004_D4",
+      "RING004_D5"
+    ],
+    "start_date": "2026-01-12",
+    "stages": [
+      {
+        "stage_name": "fan_in",
+        "day_offset": 2,
+        "transaction_ids": [
+          "TX0001953",
+          "TX0001954",
+          "TX0001955",
+          "TX0001956",
+          "TX0001957"
+        ]
+      },
+      {
+        "stage_name": "layering",
+        "day_offset": 3,
+        "transaction_ids": [
+          "TX0001958",
+          "TX0001959",
+          "TX0001960"
+        ]
+      },
+      {
+        "stage_name": "fan_out",
+        "day_offset": 4,
+        "transaction_ids": [
+          "TX0001961",
+          "TX0001962",
+          "TX0001963",
+          "TX0001964",
+          "TX0001965"
+        ]
+      },
+      {
+        "stage_name": "repeated_intermediary",
+        "day_offset": 5,
+        "transaction_ids": [
+          "TX0001966",
+          "TX0001967"
+        ]
+      },
+      {
+        "stage_name": "circular_flow",
+        "day_offset": 6,
+        "transaction_ids": [
+          "TX0001968"
+        ]
+      }
+    ],
+    "observable_time": "2026-01-18",
+    "observable_day_index": 17
+  },
+  {
+    "ring_id": "RING005",
+    "scenario_id": "RING005",
+    "accounts": [
+      "RING005_S1",
+      "RING005_S2",
+      "RING005_S3",
+      "RING005_S4",
+      "RING005_S5",
+      "RING005_C1",
+      "RING005_C2",
+      "RING005_C3",
+      "RING005_C4",
+      "RING005_D1",
+      "RING005_D2",
+      "RING005_D3",
+      "RING005_D4",
+      "RING005_D5"
+    ],
+    "start_date": "2026-01-16",
+    "stages": [
+      {
+        "stage_name": "fan_in",
+        "day_offset": 2,
+        "transaction_ids": [
+          "TX0001981",
+          "TX0001982",
+          "TX0001983",
+          "TX0001984",
+          "TX0001985"
+        ]
+      },
+      {
+        "stage_name": "layering",
+        "day_offset": 3,
+        "transaction_ids": [
+          "TX0001986",
+          "TX0001987",
+          "TX0001988"
+        ]
+      },
+      {
+        "stage_name": "fan_out",
+        "day_offset": 4,
+        "transaction_ids": [
+          "TX0001989",
+          "TX0001990",
+          "TX0001991",
+          "TX0001992",
+          "TX0001993"
+        ]
+      },
+      {
+        "stage_name": "repeated_intermediary",
+        "day_offset": 5,
+        "transaction_ids": [
+          "TX0001994",
+          "TX0001995"
+        ]
+      },
+      {
+        "stage_name": "circular_flow",
+        "day_offset": 6,
+        "transaction_ids": [
+          "TX0001996"
+        ]
+      }
+    ],
+    "observable_time": "2026-01-22",
+    "observable_day_index": 21
+  },
+  {
+    "ring_id": "RING006",
+    "scenario_id": "RING006",
+    "accounts": [
+      "RING006_S1",
+      "RING006_S2",
+      "RING006_S3",
+      "RING006_S4",
+      "RING006_S5",
+      "RING006_C1",
+      "RING006_C2",
+      "RING006_C3",
+      "RING006_C4",
+      "RING006_D1",
+      "RING006_D2",
+      "RING006_D3",
+      "RING006_D4",
+      "RING006_D5"
+    ],
+    "start_date": "2026-01-21",
+    "stages": [
+      {
+        "stage_name": "fan_in",
+        "day_offset": 2,
+        "transaction_ids": [
+          "TX0002009",
+          "TX0002010",
+          "TX0002011",
+          "TX0002012",
+          "TX0002013"
+        ]
+      },
+      {
+        "stage_name": "layering",
+        "day_offset": 3,
+        "transaction_ids": [
+          "TX0002014",
+          "TX0002015",
+          "TX0002016"
+        ]
+      },
+      {
+        "stage_name": "fan_out",
+        "day_offset": 4,
+        "transaction_ids": [
+          "TX0002017",
+          "TX0002018",
+          "TX0002019",
+          "TX0002020",
+          "TX0002021"
+        ]
+      },
+      {
+        "stage_name": "repeated_intermediary",
+        "day_offset": 5,
+        "transaction_ids": [
+          "TX0002022",
+          "TX0002023"
+        ]
+      },
+      {
+        "stage_name": "circular_flow",
+        "day_offset": 6,
+        "transaction_ids": [
+          "TX0002024"
+        ]
+      }
+    ],
+    "observable_time": "2026-01-27",
+    "observable_day_index": 26
+  }
+]

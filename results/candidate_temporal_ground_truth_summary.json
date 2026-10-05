@@ -1,0 +1,17 @@
+{
+  "ring_candidates": 265,
+  "aml_alert_rows": 742,
+  "unique_aml_accounts": 742,
+  "valid_aml_alert_intervals": 0,
+  "candidates_with_any_account_overlap": 241,
+  "candidates_with_at_least_two_account_overlap": 192,
+  "candidates_with_any_temporal_overlap": 0,
+  "candidates_with_at_least_two_temporal_overlap": 0,
+  "candidates_with_at_least_three_temporal_overlap": 0,
+  "candidates_with_zero_account_overlap": 24,
+  "status_distribution": {
+    "ACCOUNT_MATCH_NO_TEMPORAL_OVERLAP": 192,
+    "SINGLE_ACCOUNT_MATCH": 49,
+    "NO_MATCH": 24
+  }
+}
